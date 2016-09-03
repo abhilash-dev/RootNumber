@@ -10,7 +10,40 @@
     tools:context="com.example.rootnumber.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitleMessage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Enter input below to generate its root no."
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:textColor="#c12332"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etInput"
+        android:layout_below="@id/tvTitleMessage"
+        android:layout_marginTop="32dp"
+        android:hint="Input here"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGenerateRootNo"
+        android:layout_below="@id/etInput"
+        android:layout_marginTop="16dp"
+        android:text="Generate"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvOutput"
+        android:layout_below="@id/btnGenerateRootNo"
+        android:layout_marginTop="16dp"
+        android:textSize="320sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryDark" />
+
 </RelativeLayout>
