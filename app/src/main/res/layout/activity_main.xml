@@ -34,7 +34,7 @@
         android:id="@+id/btnGenerateRootNo"
         android:layout_below="@id/etInput"
         android:layout_marginTop="16dp"
-        android:text="Generate"/>
+        android:text="Generate" />
 
     <TextView
         android:layout_width="match_parent"
@@ -42,6 +42,7 @@
         android:id="@+id/tvOutput"
         android:layout_below="@id/btnGenerateRootNo"
         android:layout_marginTop="16dp"
+        android:paddingTop="32dp"
         android:textSize="320sp"
         android:gravity="center_horizontal"
         android:textColor="@color/colorPrimaryDark" />
