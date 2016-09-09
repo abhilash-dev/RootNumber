@@ -1,7 +1,6 @@
 package com.example.rootnumber;
 
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -78,8 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 sum += Integer.parseInt(String.valueOf(inputArray[i]).toLowerCase());
             } else if (String.valueOf(inputArray[i]).equals(" ")) {
                 continue;
-            } else {
+            } else if(charValMap.containsKey(String.valueOf(inputArray[i]).toLowerCase())){
                 sum += charValMap.get(String.valueOf(inputArray[i]).toLowerCase());
+            }else {
+                continue;
             }
         }
 
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             sum /= 10;
         }
 
-        if(rootNo>9){
+        if (rootNo > 9) {
             sum = rootNo;
             rootNo = 0;
             while (sum > 0) {
